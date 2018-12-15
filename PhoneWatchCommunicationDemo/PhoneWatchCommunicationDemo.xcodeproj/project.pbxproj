@@ -7,8 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1604393021C4A452001EA030 /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604392F21C4A452001EA030 /* Bootstrapper.swift */; };
+		1604393321C4A4FB001EA030 /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604392F21C4A452001EA030 /* Bootstrapper.swift */; };
+		16BD771121BBA9A300781CC0 /* ApplicationContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD770F21BBA99B00781CC0 /* ApplicationContextManager.swift */; };
+		16BD771321BBB0CF00781CC0 /* ApplicationContextDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771221BBB0CF00781CC0 /* ApplicationContextDataType.swift */; };
+		16BD771421BBB0CF00781CC0 /* ApplicationContextDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771221BBB0CF00781CC0 /* ApplicationContextDataType.swift */; };
+		16BD771621BBB12000781CC0 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771521BBB12000781CC0 /* Reflection.swift */; };
+		16BD771721BBB12000781CC0 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771521BBB12000781CC0 /* Reflection.swift */; };
+		16BD771921BBB50300781CC0 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771821BBB50300781CC0 /* Gate.swift */; };
+		16BD771A21BBB50300781CC0 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771821BBB50300781CC0 /* Gate.swift */; };
+		16BD771B21BBB5FA00781CC0 /* ApplicationContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD770F21BBA99B00781CC0 /* ApplicationContextManager.swift */; };
+		16BD771D21BBB6B600781CC0 /* PubSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771C21BBB6B600781CC0 /* PubSub.swift */; };
+		16BD771E21BBB6B600781CC0 /* PubSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD771C21BBB6B600781CC0 /* PubSub.swift */; };
+		16BD772321BBB80500781CC0 /* RecordListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD772221BBB80500781CC0 /* RecordListData.swift */; };
+		16BD772421BBB80500781CC0 /* RecordListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD772221BBB80500781CC0 /* RecordListData.swift */; };
+		16BD772A21BBBD7C00781CC0 /* Singletons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD772821BBBD7C00781CC0 /* Singletons.swift */; };
+		16BD772C21BBC14B00781CC0 /* Singletons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD772821BBBD7C00781CC0 /* Singletons.swift */; };
 		16EA15B921B917560018DABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15B821B917560018DABD /* AppDelegate.swift */; };
-		16EA15BB21B917560018DABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15BA21B917560018DABD /* ViewController.swift */; };
+		16EA15BB21B917560018DABD /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15BA21B917560018DABD /* RecordListViewController.swift */; };
 		16EA15BE21B917560018DABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15BC21B917560018DABD /* Main.storyboard */; };
 		16EA15C021B917570018DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15BF21B917570018DABD /* Assets.xcassets */; };
 		16EA15C321B917570018DABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15C121B917570018DABD /* LaunchScreen.storyboard */; };
@@ -16,9 +32,18 @@
 		16EA15CE21B917570018DABD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15CC21B917570018DABD /* Interface.storyboard */; };
 		16EA15D021B917580018DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15CF21B917580018DABD /* Assets.xcassets */; };
 		16EA15D721B917580018DABD /* PhoneWatchCommunicationDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 16EA15D621B917580018DABD /* PhoneWatchCommunicationDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		16EA15DC21B917580018DABD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15DB21B917580018DABD /* InterfaceController.swift */; };
+		16EA15DC21B917580018DABD /* RecordListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15DB21B917580018DABD /* RecordListInterfaceController.swift */; };
 		16EA15DE21B917580018DABD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA15DD21B917580018DABD /* ExtensionDelegate.swift */; };
 		16EA15E021B917580018DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA15DF21B917580018DABD /* Assets.xcassets */; };
+		16F684CF21C6521800CAFA28 /* MessageFromPhoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684CE21C6521800CAFA28 /* MessageFromPhoneData.swift */; };
+		16F684D121C6522900CAFA28 /* MessageFromWatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684D021C6522900CAFA28 /* MessageFromWatchData.swift */; };
+		16F684D521C65BD000CAFA28 /* MessageFromPhoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684CE21C6521800CAFA28 /* MessageFromPhoneData.swift */; };
+		16F684D621C65BD300CAFA28 /* MessageFromWatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684D021C6522900CAFA28 /* MessageFromWatchData.swift */; };
+		16F684D821C6608B00CAFA28 /* MessageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684D721C6608B00CAFA28 /* MessageInterfaceController.swift */; };
+		16F684DA21C6640000CAFA28 /* MainMenuInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684D921C6640000CAFA28 /* MainMenuInterfaceController.swift */; };
+		16F684DC21C6692100CAFA28 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684DB21C6692100CAFA28 /* MessageViewController.swift */; };
+		16F684DE21C6799000CAFA28 /* UpdateApplicationContextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684DD21C6799000CAFA28 /* UpdateApplicationContextData.swift */; };
+		16F684DF21C679B100CAFA28 /* UpdateApplicationContextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F684DD21C6799000CAFA28 /* UpdateApplicationContextData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +89,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1604392F21C4A452001EA030 /* Bootstrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
+		16BD770F21BBA99B00781CC0 /* ApplicationContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContextManager.swift; sourceTree = "<group>"; };
+		16BD771221BBB0CF00781CC0 /* ApplicationContextDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContextDataType.swift; sourceTree = "<group>"; };
+		16BD771521BBB12000781CC0 /* Reflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
+		16BD771821BBB50300781CC0 /* Gate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gate.swift; sourceTree = "<group>"; };
+		16BD771C21BBB6B600781CC0 /* PubSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSub.swift; sourceTree = "<group>"; };
+		16BD772221BBB80500781CC0 /* RecordListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListData.swift; sourceTree = "<group>"; };
+		16BD772821BBBD7C00781CC0 /* Singletons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singletons.swift; sourceTree = "<group>"; };
 		16EA15B521B917560018DABD /* PhoneWatchCommunicationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneWatchCommunicationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA15B821B917560018DABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16EA15BA21B917560018DABD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16EA15BA21B917560018DABD /* RecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewController.swift; sourceTree = "<group>"; };
 		16EA15BD21B917560018DABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16EA15BF21B917570018DABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EA15C221B917570018DABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,10 +109,16 @@
 		16EA15CF21B917580018DABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EA15D121B917580018DABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16EA15D621B917580018DABD /* PhoneWatchCommunicationDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PhoneWatchCommunicationDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16EA15DB21B917580018DABD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		16EA15DB21B917580018DABD /* RecordListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListInterfaceController.swift; sourceTree = "<group>"; };
 		16EA15DD21B917580018DABD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		16EA15DF21B917580018DABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EA15E121B917580018DABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F684CE21C6521800CAFA28 /* MessageFromPhoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromPhoneData.swift; sourceTree = "<group>"; };
+		16F684D021C6522900CAFA28 /* MessageFromWatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromWatchData.swift; sourceTree = "<group>"; };
+		16F684D721C6608B00CAFA28 /* MessageInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInterfaceController.swift; sourceTree = "<group>"; };
+		16F684D921C6640000CAFA28 /* MainMenuInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuInterfaceController.swift; sourceTree = "<group>"; };
+		16F684DB21C6692100CAFA28 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		16F684DD21C6799000CAFA28 /* UpdateApplicationContextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApplicationContextData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +139,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16BD772521BBB80900781CC0 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				16BD770F21BBA99B00781CC0 /* ApplicationContextManager.swift */,
+				16BD771521BBB12000781CC0 /* Reflection.swift */,
+				16BD771821BBB50300781CC0 /* Gate.swift */,
+				16BD771C21BBB6B600781CC0 /* PubSub.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		16BD772621BBB82600781CC0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				16BD771221BBB0CF00781CC0 /* ApplicationContextDataType.swift */,
+				16BD772221BBB80500781CC0 /* RecordListData.swift */,
+				16F684CE21C6521800CAFA28 /* MessageFromPhoneData.swift */,
+				16F684D021C6522900CAFA28 /* MessageFromWatchData.swift */,
+				16F684DD21C6799000CAFA28 /* UpdateApplicationContextData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		16BD772B21BBC13C00781CC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16F684CC21C650A400CAFA28 /* Dirty */,
+				16BD772521BBB80900781CC0 /* Infrastructure */,
+				16BD772621BBB82600781CC0 /* Data */,
+				1604392F21C4A452001EA030 /* Bootstrapper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		16EA15AC21B917560018DABD = {
 			isa = PBXGroup;
 			children = (
+				16BD772B21BBC13C00781CC0 /* Common */,
 				16EA15B721B917560018DABD /* PhoneWatchCommunicationDemo */,
 				16EA15CB21B917570018DABD /* PhoneWatchCommunicationDemo WatchKit App */,
 				16EA15DA21B917580018DABD /* PhoneWatchCommunicationDemo WatchKit Extension */,
@@ -124,7 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				16EA15B821B917560018DABD /* AppDelegate.swift */,
-				16EA15BA21B917560018DABD /* ViewController.swift */,
+				16EA15BA21B917560018DABD /* RecordListViewController.swift */,
+				16F684DB21C6692100CAFA28 /* MessageViewController.swift */,
 				16EA15BC21B917560018DABD /* Main.storyboard */,
 				16EA15BF21B917570018DABD /* Assets.xcassets */,
 				16EA15C121B917570018DABD /* LaunchScreen.storyboard */,
@@ -146,12 +221,22 @@
 		16EA15DA21B917580018DABD /* PhoneWatchCommunicationDemo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				16EA15DB21B917580018DABD /* InterfaceController.swift */,
+				16F684D921C6640000CAFA28 /* MainMenuInterfaceController.swift */,
+				16EA15DB21B917580018DABD /* RecordListInterfaceController.swift */,
+				16F684D721C6608B00CAFA28 /* MessageInterfaceController.swift */,
 				16EA15DD21B917580018DABD /* ExtensionDelegate.swift */,
 				16EA15DF21B917580018DABD /* Assets.xcassets */,
 				16EA15E121B917580018DABD /* Info.plist */,
 			);
 			path = "PhoneWatchCommunicationDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		16F684CC21C650A400CAFA28 /* Dirty */ = {
+			isa = PBXGroup;
+			children = (
+				16BD772821BBBD7C00781CC0 /* Singletons.swift */,
+			);
+			path = Dirty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +371,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16EA15BB21B917560018DABD /* ViewController.swift in Sources */,
+				16BD772321BBB80500781CC0 /* RecordListData.swift in Sources */,
+				16F684CF21C6521800CAFA28 /* MessageFromPhoneData.swift in Sources */,
+				16BD771D21BBB6B600781CC0 /* PubSub.swift in Sources */,
+				16F684DC21C6692100CAFA28 /* MessageViewController.swift in Sources */,
+				16EA15BB21B917560018DABD /* RecordListViewController.swift in Sources */,
+				16BD772C21BBC14B00781CC0 /* Singletons.swift in Sources */,
+				16BD771921BBB50300781CC0 /* Gate.swift in Sources */,
+				16BD771B21BBB5FA00781CC0 /* ApplicationContextManager.swift in Sources */,
+				1604393321C4A4FB001EA030 /* Bootstrapper.swift in Sources */,
+				16BD771321BBB0CF00781CC0 /* ApplicationContextDataType.swift in Sources */,
+				16F684D121C6522900CAFA28 /* MessageFromWatchData.swift in Sources */,
+				16BD771621BBB12000781CC0 /* Reflection.swift in Sources */,
 				16EA15B921B917560018DABD /* AppDelegate.swift in Sources */,
+				16F684DE21C6799000CAFA28 /* UpdateApplicationContextData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +392,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F684D521C65BD000CAFA28 /* MessageFromPhoneData.swift in Sources */,
+				16F684DA21C6640000CAFA28 /* MainMenuInterfaceController.swift in Sources */,
+				16F684D621C65BD300CAFA28 /* MessageFromWatchData.swift in Sources */,
+				16BD772421BBB80500781CC0 /* RecordListData.swift in Sources */,
+				16BD771E21BBB6B600781CC0 /* PubSub.swift in Sources */,
+				16BD771421BBB0CF00781CC0 /* ApplicationContextDataType.swift in Sources */,
+				16BD772A21BBBD7C00781CC0 /* Singletons.swift in Sources */,
 				16EA15DE21B917580018DABD /* ExtensionDelegate.swift in Sources */,
-				16EA15DC21B917580018DABD /* InterfaceController.swift in Sources */,
+				16F684DF21C679B100CAFA28 /* UpdateApplicationContextData.swift in Sources */,
+				16F684D821C6608B00CAFA28 /* MessageInterfaceController.swift in Sources */,
+				16EA15DC21B917580018DABD /* RecordListInterfaceController.swift in Sources */,
+				1604393021C4A452001EA030 /* Bootstrapper.swift in Sources */,
+				16BD771721BBB12000781CC0 /* Reflection.swift in Sources */,
+				16BD771A21BBB50300781CC0 /* Gate.swift in Sources */,
+				16BD771121BBA9A300781CC0 /* ApplicationContextManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

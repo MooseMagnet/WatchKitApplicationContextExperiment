@@ -6,6 +6,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet private weak var recordsTable: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        _ = _pubSub.sub(RecordListData.self) {
+            self.updateTable($0.records)
+        }
+        
+        let existingRecords = _applicationContextManager.getDataSharedAcrossDevices(RecordListData.self).records
+        updateTable(existingRecords)
+    }
+    
+    private func updateTable(_ newRecords: [String]) {
+        records = newRecords
+        DispatchQueue.main.async { [weak self] in
+            self?.recordsTable.reloadData()
+        }
+    }
+    
+    private func publish() {
+        _pubSub.pub(
+            UpdateApplicationContextData(data:
+                RecordListData(records: records, timestamp: Date().timeIntervalSince1970)))
+    }
+    
     // MARK: UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,7 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         records.remove(at: indexPath.row)
-        tableView.reloadData()
+        publish()
     }
     
     // MARK: IB Actions
@@ -37,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             guard let record = prompt.textFields!.first!.text else { return }
             prompt.dismiss(animated: true, completion: nil)
             self.records.append(record)
-            self.recordsTable.reloadData()
+            self.publish()
         })
         prompt.addTextField(configurationHandler: nil)
         present(prompt, animated: true, completion: nil)
@@ -45,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func ClearAll() {
         records = []
-        recordsTable.reloadData()
+        publish()
     }
 }
 

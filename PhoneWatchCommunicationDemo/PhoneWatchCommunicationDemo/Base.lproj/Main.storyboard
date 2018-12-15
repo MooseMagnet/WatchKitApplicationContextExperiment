@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4rP-nW-hEO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="b1f-TT-MdF">
+            <objects>
+                <tabBarController id="4rP-nW-hEO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="av5-v2-j8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KC2-vX-LRF"/>
+                        <segue destination="1t5-n6-rJe" kind="relationship" relationship="viewControllers" id="NtA-gH-la9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXU-Yk-WWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="132"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="lBF-rA-9Nd">
+            <objects>
+                <viewController id="1t5-n6-rJe" customClass="MessageViewController" customModule="PhoneWatchCommunicationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hyS-3b-QHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's where a message will display..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzB-8y-W3z">
+                                <rect key="frame" x="16" y="44" width="343" height="625"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKr-XX-Tim">
+                                <rect key="frame" x="0.0" y="685" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7Fu-Ec-V5b"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Send Message" id="khN-HF-dLw">
+                                        <connections>
+                                            <action selector="sendMessage" destination="1t5-n6-rJe" id="DRi-Mg-4AS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aKr-XX-Tim" firstAttribute="leading" secondItem="Mo1-Kl-fdp" secondAttribute="leading" id="9fN-Rw-sdC"/>
+                            <constraint firstItem="HzB-8y-W3z" firstAttribute="top" secondItem="Mo1-Kl-fdp" secondAttribute="top" id="T8d-e4-FwK"/>
+                            <constraint firstItem="Mo1-Kl-fdp" firstAttribute="trailing" secondItem="aKr-XX-Tim" secondAttribute="trailing" id="U7D-x8-NTk"/>
+                            <constraint firstItem="Mo1-Kl-fdp" firstAttribute="bottom" secondItem="aKr-XX-Tim" secondAttribute="bottom" id="Wn7-SF-Yth"/>
+                            <constraint firstItem="Mo1-Kl-fdp" firstAttribute="trailing" secondItem="HzB-8y-W3z" secondAttribute="trailing" constant="16" id="aeW-Xe-Wzw"/>
+                            <constraint firstItem="HzB-8y-W3z" firstAttribute="leading" secondItem="Mo1-Kl-fdp" secondAttribute="leading" constant="16" id="aff-4l-5PY"/>
+                            <constraint firstItem="aKr-XX-Tim" firstAttribute="top" secondItem="HzB-8y-W3z" secondAttribute="bottom" constant="16" id="iwh-hS-1W8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mo1-Kl-fdp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Message" id="9Oh-kR-Slp"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="HzB-8y-W3z" id="gwi-ug-gMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XmV-0m-auD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="484.72906403940891"/>
+        </scene>
+        <!--Record List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhoneWatchCommunicationDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-ce-I72">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="xSk-RR-0RW" style="IBUITableViewCellStyleDefault" id="eND-vW-Jco">
@@ -46,7 +113,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTj-wo-LhX">
-                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="685" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Add" id="6lc-oK-SGW">
                                         <connections>
@@ -73,13 +140,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Record List" id="hTe-mh-Ld3"/>
                     <connections>
                         <outlet property="recordsTable" destination="Bi4-ce-I72" id="fMo-ff-gkb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+            <point key="canvasLocation" x="-22" y="-179"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="il6-n1-fhj">
     <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,11 +9,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Main Menu Interface Controller-->
+        <scene sceneID="T42-Us-ZF5">
+            <objects>
+                <controller id="il6-n1-fhj" customClass="MainMenuInterfaceController" customModule="PhoneWatchCommunicationDemo_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Record List" id="0st-4k-Z8E">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="Axk-qG-BMQ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Message" id="dnV-Y1-ksr">
+                            <connections>
+                                <segue destination="1V3-rZ-OlD" kind="push" id="gRO-vW-Ps3"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-308" y="14"/>
+        </scene>
+        <!--Record List Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PhoneWatchCommunicationDemo_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="RecordListInterfaceController" customModule="PhoneWatchCommunicationDemo_WatchKit_Extension">
                     <items>
+                        <label width="1" alignment="left" verticalAlignment="center" text="No records to display..." textAlignment="center" numberOfLines="0" id="Q2m-c0-6Cn"/>
                         <table alignment="left" id="fhu-EX-09U">
                             <items>
                                 <tableRow identifier="RecordRowController" id="wjJ-ec-y15" customClass="RecordRowController" customModule="PhoneWatchCommunicationDemo_WatchKit_App" customModuleProvider="target">
@@ -44,11 +65,35 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="noRecordsLabel" destination="Q2m-c0-6Cn" id="cM3-zN-Ggs"/>
                         <outlet property="recordsTable" destination="fhu-EX-09U" id="JfK-oe-jq2"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="23.652173913043477" y="58.4375"/>
+            <point key="canvasLocation" x="-92" y="-106"/>
+        </scene>
+        <!--Message Interface Controller-->
+        <scene sceneID="LYX-Z4-JSd">
+            <objects>
+                <controller id="1V3-rZ-OlD" customClass="MessageInterfaceController" customModule="PhoneWatchCommunicationDemo_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Here's where a message will display..." textAlignment="center" numberOfLines="0" id="XHA-m0-6bJ"/>
+                    </items>
+                    <menu key="menu" id="zM9-DM-uP0">
+                        <items>
+                            <menuItem title="Send Message" icon="accept" id="m6n-Rw-bxb">
+                                <connections>
+                                    <action selector="sendMessage" destination="1V3-rZ-OlD" id="xwN-VQ-IwR"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="messageLabel" destination="XHA-m0-6bJ" id="e7Q-k2-zuv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-92.391304347826079" y="150.26785714285714"/>
         </scene>
     </scenes>
 </document>
